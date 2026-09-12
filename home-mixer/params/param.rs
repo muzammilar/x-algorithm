@@ -1,4 +1,4 @@
-// mirrored from config feature-switch defaults; last sync 2026-09-10T16:21:03Z
+// mirrored from config feature-switch defaults; last sync 2026-09-11T16:22:45Z
 use xai_feature_switches::param;
 
 param!(

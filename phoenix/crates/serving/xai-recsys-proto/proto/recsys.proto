@@ -118,6 +118,8 @@ message PredictNextActionsRequest {
   bool returnBackboneScores = 20;
 
   map<string, string> experiment_overrides = 21;
+
+  bool returnLogitsList = 22;
 }
 
 message PageDecodeParams {
@@ -263,6 +265,8 @@ message NextActionDistribution {
 
   repeated float backboneTopLogProbs = 10;
   repeated float backboneContinuousValues = 11;
+
+  repeated float requestedActionLogits = 12;
 }
 
 message RewardOutputs {
@@ -379,6 +383,8 @@ enum ActionName {
   CLIENT_TWEET_SEARCH_QUERY_REFORMULATED = 104;
   CLIENT_TWEET_RELEVANT_TO_SEARCH = 105;
   CLIENT_TWEET_NOT_RELEVANT_TO_SEARCH = 106;
+  LLM_JUDGE_RELEVANT_TO_SEARCH = 107;
+  LLM_JUDGE_NOT_RELEVANT_TO_SEARCH = 108;
 
   ADS_WEB_CONVERSION = 128;
   ADS_VIDEO_VIEW = 129;
